@@ -2,6 +2,16 @@ import { option, optional, string, Type } from "cmd-ts";
 import _ from "lodash";
 import { D2Api } from "../types/d2-api";
 import { isElementOfUnion } from "../utils/ts-utils";
+import { Async } from "domain/entities/Async";
+
+export async function runAsync(async: Async<unknown>): Promise<void> {
+    try {
+        await async;
+    } catch (err) {
+        console.trace(err);
+        process.exit(1);
+    }
+}
 
 export function getD2Api(url: string): D2Api {
     const { baseUrl, auth } = getApiOptionsFromUrl(url);
