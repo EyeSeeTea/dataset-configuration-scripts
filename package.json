@@ -17,10 +17,14 @@
     "dependencies": {
         "@eyeseetea/d2-api": "^1.11.0",
         "cmd-ts": "^0.10.0",
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "md5": "^2.3.0",
+        "purify-ts": "^2.0.3",
+        "xlsx": "^0.18.5"
     },
     "devDependencies": {
         "@types/lodash": "^4.14.180",
+        "@types/md5": "^2.3.5",
         "@types/node": "^17.0.21",
         "@typescript-eslint/eslint-plugin": "^5.15.0",
         "@typescript-eslint/parser": "^5.15.0",
